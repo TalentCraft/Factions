@@ -1,14 +1,14 @@
-name: Factions
+name: TalentCraftFactions
 version: ${project.version}
 main: com.massivecraft.factions.P
-authors: [Olof Larsson, Brett Flannigan, drtshock]
+authors: [OG: Olof Larsson, Brett Flannigan, drtshock | TC: iReversal]
 softdepend: [PlayerVaults, PermissionsEx, Permissions, Essentials, EssentialsChat, HeroChat, iChat, LocalAreaChat, LWC, nChat, ChatManager, CAPI, AuthMe, Vault, Spout, WorldEdit, WorldGuard, AuthDB, CaptureThePoints, CombatTag, dynmap]
 commands:
   factions:
     description: Reference command for Factions.
     aliases: [f]
 permissions:
-  factions.kit.admin:
+  tcfactions.kit.admin:
     description: All faction permissions.
     children:
       factions.kit.mod: true
@@ -19,11 +19,11 @@ permissions:
       factions.modifypower: true
       factions.ahome: true
       factions.setmaxvaults: true
-  factions.*:
+  tcfactions.*:
     description: This is just an alias for factions.kit.admin
     children:
       factions.kit.admin: true
-  factions.kit.mod:
+  tcfactions.kit.mod:
     description: All faction permissions but configuration and persistance.
     children:
       factions.kit.halfmod: true
@@ -38,7 +38,7 @@ permissions:
       factions.join.others: true
       factions.admin.any: true
       factions.mod.any: true
-  factions.kit.halfmod:
+  tcfactions.kit.halfmod:
     description: Zones, bypassing, kicking, and chatspy
     children:
       factions.kit.fullplayer: true
@@ -49,13 +49,13 @@ permissions:
       factions.ownershipbypass: true
       factions.chatspy: true
       factions.show.bypassexempt: true
-  factions.kit.fullplayer:
+  tcfactions.kit.fullplayer:
     default: true
     description: Can also create new factions.
     children:
       factions.kit.halfplayer: true
       factions.create: true
-  factions.kit.halfplayer:
+  tcfactions.kit.halfplayer:
     description: Can do all but create factions.
     children:
       factions.admin: true
@@ -99,85 +99,85 @@ permissions:
       factions.top: true
       factions.togglealliancechat: true
       factions.vault: true
-  factions.admin:
+  tcfactions.admin:
     description: hand over your admin rights
-  factions.admin.any:
+  tcfactions.admin.any:
     description: give or revoke admin status for any player in any faction
-  factions.announce:
+  tcfactions.announce:
     description: announce things to the peasants
-  factions.autoclaim:
+  tcfactions.autoclaim:
     description: auto-claim land as you walk around
-  factions.bypass:
+  tcfactions.bypass:
     description: enable admin bypass mode
-  factions.chat:
+  tcfactions.chat:
     description: change chat mode
-  factions.chatspy:
+  tcfactions.chatspy:
     description: enable admin chat spy mode
-  factions.claim:
+  tcfactions.claim:
     description: claim land where you are standing
-  factions.claim.radius:
+  tcfactions.claim.radius:
     description: claim land in a large radius
-  factions.config:
+  tcfactions.config:
     description: change a conf.json setting
-  factions.create:
+  tcfactions.create:
     description: create a new faction
-  factions.deinvite:
+  tcfactions.deinvite:
     description: remove a pending invitation
-  factions.description:
+  tcfactions.description:
     description: change the faction description
-  factions.disband:
+  tcfactions.disband:
     description: disband a faction
-  factions.disband.any:
+  tcfactions.disband.any:
     description: disband another faction
-  factions.help:
+  tcfactions.help:
     description: display a help page
-  factions.home:
+  tcfactions.home:
     description: teleport to the faction home
-  factions.invite:
+  tcfactions.invite:
     description: invite a player to your faction
-  factions.join:
+  tcfactions.join:
     description: join a faction
-  factions.join.any:
+  tcfactions.join.any:
     description: join any faction, bypassing invitation process for closed factions
-  factions.join.others:
+  tcfactions.join.others:
     description: specify another player in the join command, to move them to the specified faction
-  factions.kick:
+  tcfactions.kick:
     description: kick a player from the faction
-  factions.kick.any:
+  tcfactions.kick.any:
     description: kick anyone from any faction
-  factions.leave:
+  tcfactions.leave:
     description: leave your faction
-  factions.list:
+  tcfactions.list:
     description: see a list of the factions
-  factions.lock:
+  tcfactions.lock:
     description: lock all write stuff
-  factions.managesafezone:
+  tcfactions.managesafezone:
     description: claim land as a safe zone and build/destroy within safe zones
-  factions.managewarzone:
+  tcfactions.managewarzone:
     description: claim land as a war zone and build/destroy within war zones
-  factions.map:
+  tcfactions.map:
     description: show the territory map, and set optional auto update
-  factions.mod:
+  tcfactions.mod:
     description: give or revoke moderator rights
-  factions.mod.any:
+  tcfactions.mod.any:
     description: give or revoke moderator rights for any player in any faction
-  factions.money.balance:
+  tcfactions.money.balance:
     description: show your factions current money balance
-  factions.money.balance.any:
+  tcfactions.money.balance.any:
     description: show money balance for factions other than your own
-  factions.money.deposit:
+  tcfactions.money.deposit:
     description: deposit money into a faction bank
-  factions.money.withdraw:
+  tcfactions.money.withdraw:
     description: withdraw money from your faction bank
-  factions.money.withdraw.any:
+  tcfactions.money.withdraw.any:
     description: withdraw money from your factions other than your own
-  factions.money.f2f:
+  tcfactions.money.f2f:
     description: transfer money from faction to faction
-  factions.money.f2p:
+  tcfactions.money.f2p:
     description: transfer money from faction to player
-  factions.money.p2f:
+  tcfactions.money.p2f:
     description: transfer money from player to faction
-  factions.money.kit.standard:
+  tcfactions.money.kit.standard:
     children:
       factions.money.balance: true
       factions.money.balance.any: true
@@ -186,7 +186,7 @@ permissions:
       factions.money.f2f: true
       factions.money.f2p: true
       factions.money.p2f: true
-  factions.money.*:
+  tcfactions.money.*:
     children:
       factions.money.kit.standard: true
       factions.money.balance.any: true
@@ -196,81 +196,81 @@ permissions:
       factions.money.f2f: true
       factions.money.f2p: true
       factions.money.p2f: true
-  factions.noboom:
+  tcfactions.noboom:
     description: toggle explosions (peaceful factions only)
-  factions.open:
+  tcfactions.open:
     description: switch if invitation is required to join
-  factions.owner:
+  tcfactions.owner:
     description: set ownership of claimed land
-  factions.ownerlist:
+  tcfactions.ownerlist:
     description: list owner(s) of this claimed land
-  factions.ownershipbypass:
+  tcfactions.ownershipbypass:
     description: bypass ownership restrictions within own faction's territory
-  factions.setpeaceful:
+  tcfactions.setpeaceful:
     description: designate a faction as peaceful
-  factions.setpermanent:
+  tcfactions.setpermanent:
     description: designate a faction as permanent
-  factions.setpermanentpower:
+  tcfactions.setpermanentpower:
     description: set permanent power for a faction
-  factions.stuck:
+  tcfactions.stuck:
     description: teleports player outside a faction
-  factions.power:
+  tcfactions.power:
     description: show player power info
-  factions.power.any:
+  tcfactions.power.any:
     description: view an other players power level
-  factions.powerboost:
+  tcfactions.powerboost:
     description: apply permanent power bonus/penalty to specified player or faction
-  factions.relation:
+  tcfactions.relation:
     description: set relation wish to another faction
-  factions.reload:
+  tcfactions.reload:
     description: reload data file(s) from disk
-  factions.save:
+  tcfactions.save:
     description: save all data to disk
-  factions.sethome:
+  tcfactions.sethome:
     description: set the faction home
-  factions.sethome.any:
+  tcfactions.sethome.any:
     description: set faction home for another faction
-  factions.show:
+  tcfactions.show:
     description: show faction information
-  factions.show.bypassexempt:
+  tcfactions.show.bypassexempt:
     description: show exempt faction information
-  factions.tag:
+  tcfactions.tag:
     description: change the faction tag
-  factions.title:
+  tcfactions.title:
     description: set or remove a players title
-  factions.version:
+  tcfactions.version:
     description: see the version of the plugin
-  factions.unclaim:
+  tcfactions.unclaim:
     description: unclaim the land where you are standing
-  factions.unclaimall:
+  tcfactions.unclaimall:
     description: unclaim all of your factions land
-  factions.scoreboard:
+  tcfactions.scoreboard:
     description: ability to toggle scoreboards
-  factions.showinvites:
+  tcfactions.showinvites:
     description: show pending invites to your faction
-  factions.seechunk:
+  tcfactions.seechunk:
     description: see the chunk you stand in
-  factions.setwarp:
+  tcfactions.setwarp:
     description: set a warp for your faction
-  factions.warp:
+  tcfactions.warp:
     description: access your faction warps
-  factions.modifypower:
+  tcfactions.modifypower:
     description: modify other player's power
-  factions.monitorlogins:
+  tcfactions.monitorlogins:
     description: monitor join and leaves of faction members
-  factions.claim.line:
+  tcfactions.claim.line:
     description: claim in a line
-  factions.top:
+  tcfactions.top:
     description: sort factions
-  factions.togglealliancechat:
+  tcfactions.togglealliancechat:
     description: toggle alliance chat on and off
-  factions.dontlosepoweroffline:
+  tcfactions.dontlosepoweroffline:
     description: Don't lose power for being offline.
-  factions.ahome:
+  tcfactions.ahome:
     description: Ability to send players to their faction home.
-  factions.autoleavebypass:
+  tcfactions.autoleavebypass:
     description: Bypass autoleave.
-  factions.vault:
+  tcfactions.vault:
     description: Access faction vault.
-  factions.setmaxvault:
+  tcfactions.setmaxvault:
     description: Set a faction's max vaults.
