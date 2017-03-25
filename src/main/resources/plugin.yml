@@ -1,4 +1,4 @@
-name: TalentCraftFactions
+name: Factions
 version: ${project.version}
 main: com.massivecraft.factions.P
 authors: [OG: Olof Larsson, Brett Flannigan, drtshock | TC: iReversal]
