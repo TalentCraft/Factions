@@ -85,7 +85,7 @@ public enum Permission {
     public final String node;
 
     Permission(final String node) {
-        this.node = "factions." + node;
+        this.node = "tcfactions." + node;
     }
 
     public boolean has(CommandSender sender, boolean informSenderIfNot) {
