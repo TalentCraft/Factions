@@ -1,4 +1,4 @@
-name: TalentCraftFactions
+name: Factions
 version: ${project.version}
 main: com.massivecraft.factions.P
 authors: [OG: Olof Larsson, Brett Flannigan, drtshock | TC: iReversal]
@@ -11,14 +11,14 @@ permissions:
   tcfactions.kit.admin:
     description: All faction permissions.
     children:
-      factions.kit.mod: true
-      factions.config: true
-      factions.lock: true
-      factions.reload: true
-      factions.save: true
-      factions.modifypower: true
-      factions.ahome: true
-      factions.setmaxvaults: true
+      tcfactions.kit.mod: true
+      tcfactions.config: true
+      tcfactions.lock: true
+      tcfactions.reload: true
+      tcfactions.save: true
+      tcfactions.modifypower: true
+      tcfactions.ahome: true
+      tcfactions.setmaxvaults: true
   tcfactions.*:
     description: This is just an alias for factions.kit.admin
     children:
@@ -26,79 +26,79 @@ permissions:
   tcfactions.kit.mod:
     description: All faction permissions but configuration and persistance.
     children:
-      factions.kit.halfmod: true
-      factions.disband.any: true
-      factions.setpeaceful: true
-      factions.setpermanent: true
-      factions.setpermanentpower: true
-      factions.powerboost: true
-      factions.sethome.any: true
-      factions.money.*: true
-      factions.join.any: true
-      factions.join.others: true
-      factions.admin.any: true
-      factions.mod.any: true
+      tcfactions.kit.halfmod: true
+      tcfactions.disband.any: true
+      tcfactions.setpeaceful: true
+      tcfactions.setpermanent: true
+      tcfactions.setpermanentpower: true
+      tcfactions.powerboost: true
+      tcfactions.sethome.any: true
+      tcfactions.money.*: true
+      tcfactions.join.any: true
+      tcfactions.join.others: true
+      tcfactions.admin.any: true
+      tcfactions.mod.any: true
   tcfactions.kit.halfmod:
     description: Zones, bypassing, kicking, and chatspy
     children:
-      factions.kit.fullplayer: true
-      factions.managesafezone: true
-      factions.managewarzone: true
-      factions.bypass: true
-      factions.kick.any: true
-      factions.ownershipbypass: true
-      factions.chatspy: true
-      factions.show.bypassexempt: true
+      tcfactions.kit.fullplayer: true
+      tcfactions.managesafezone: true
+      tcfactions.managewarzone: true
+      tcfactions.bypass: true
+      tcfactions.kick.any: true
+      tcfactions.ownershipbypass: true
+      tcfactions.chatspy: true
+      tcfactions.show.bypassexempt: true
   tcfactions.kit.fullplayer:
     default: true
     description: Can also create new factions.
     children:
-      factions.kit.halfplayer: true
+      tcfactions.kit.halfplayer: true
       factions.create: true
   tcfactions.kit.halfplayer:
     description: Can do all but create factions.
     children:
-      factions.admin: true
-      factions.autoclaim: true
-      factions.chat: true
-      factions.claim: true
-      factions.claim.line: true
-      factions.claim.radius: true
-      factions.deinvite: true
-      factions.description: true
-      factions.disband: true
-      factions.help: true
-      factions.home: true
-      factions.invite: true
-      factions.join: true
-      factions.kick: true
-      factions.leave: true
-      factions.list: true
-      factions.map: true
-      factions.mod: true
-      factions.money.kit.standard: true
-      factions.noboom: true
-      factions.open: true
-      factions.owner: true
-      factions.ownerlist: true
-      factions.power: true
-      factions.power.any: true
-      factions.relation: true
-      factions.sethome: true
-      factions.show: true
-      factions.stuck: true
-      factions.tag: true
-      factions.title: true
-      factions.version: true
-      factions.unclaim: true
-      factions.unclaimall: true
-      factions.scoreboard: true
-      factions.showinvites: true
-      factions.seechunk: true
-      factions.monitorlogins: true
-      factions.top: true
-      factions.togglealliancechat: true
-      factions.vault: true
+      tcfactions.admin: true
+      tcfactions.autoclaim: true
+      tcfactions.chat: true
+      tcfactions.claim: true
+      tcfactions.claim.line: true
+      tcfactions.claim.radius: true
+      tcfactions.deinvite: true
+      tcfactions.description: true
+      tcfactions.disband: true
+      tcfactions.help: true
+      tcfactions.home: true
+      tcfactions.invite: true
+      tcfactions.join: true
+      tcfactions.kick: true
+      tcfactions.leave: true
+      tcfactions.list: true
+      tcfactions.map: true
+      tcfactions.mod: true
+      tcfactions.money.kit.standard: true
+      tcfactions.noboom: true
+      tcfactions.open: true
+      tcfactions.owner: true
+      tcfactions.ownerlist: true
+      tcfactions.power: true
+      tcfactions.power.any: true
+      tcfactions.relation: true
+      tcfactions.sethome: true
+      tcfactions.show: true
+      tcfactions.stuck: true
+      tcfactions.tag: true
+      tcfactions.title: true
+      tcfactions.version: true
+      tcfactions.unclaim: true
+      tcfactions.unclaimall: true
+      tcfactions.scoreboard: true
+      tcfactions.showinvites: true
+      tcfactions.seechunk: true
+      tcfactions.monitorlogins: true
+      tcfactions.top: true
+      tcfactions.togglealliancechat: true
+      tcfactions.vault: true
   tcfactions.admin:
     description: hand over your admin rights
   tcfactions.admin.any:
